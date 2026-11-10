@@ -1,14 +1,21 @@
 /* ==========================================================================
-   RestartButton — Reset action
+   Action Buttons — Restart & Next Round
    ========================================================================== */
 
-.restart-button {
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  max-width: 360px;
+}
+
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   width: 100%;
-  max-width: 360px;
   height: 48px;
 
   font-family: var(--font-primary);
@@ -18,26 +25,46 @@
   letter-spacing: -0.14px;
   text-transform: uppercase;
 
+  border-radius: var(--radius-button);
+  cursor: pointer;
+  transition: background-color 140ms ease, color 140ms ease, border-color 140ms ease;
+  user-select: none;
+}
+
+.btn--restart {
   color: var(--color-white-sheet);
   background-color: var(--color-void);
   border: 1px solid var(--color-etch-line);
-  border-radius: var(--radius-button);
-
-  cursor: pointer;
-  transition: background-color 120ms ease, color 120ms ease;
 }
 
-.restart-button:hover {
+.btn--restart:hover {
   background-color: var(--color-white-sheet);
   color: var(--color-void);
 }
 
-.restart-button:focus-visible {
+.btn--restart:focus-visible {
   outline: 2px solid var(--color-signal-yellow);
   outline-offset: 2px;
 }
 
-.restart-button:active {
+.btn--restart:active {
   background-color: var(--color-studio-gray);
   color: var(--color-void);
+}
+
+.btn--next-round {
+  color: var(--color-void);
+  background-color: var(--color-white-sheet);
+  border: 1px solid var(--color-white-sheet);
+  font-weight: var(--weight-bold);
+}
+
+.btn--next-round:hover {
+  background-color: var(--color-studio-gray);
+  border-color: var(--color-studio-gray);
+}
+
+.btn--next-round:focus-visible {
+  outline: 2px solid var(--color-signal-yellow);
+  outline-offset: 2px;
 }

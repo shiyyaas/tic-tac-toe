@@ -1,19 +1,30 @@
 import "./RestartButton.css";
 
 /**
- * A button that resets the game to its initial state.
+ * Action button component for restarting the game (resetting score & board)
+ * or proceeding to the next round.
  *
- * @param {{ onClick: () => void }} props
+ * @param {{
+ *   onClick: () => void,
+ *   label?: string,
+ *   ariaLabel?: string,
+ *   variant?: "restart" | "next-round",
+ * }} props
  */
-export function RestartButton({ onClick }) {
+export function RestartButton({
+  onClick,
+  label = "Restart",
+  ariaLabel = "Restart game and reset score",
+  variant = "restart",
+}) {
   return (
     <button
-      className="restart-button"
+      className={`btn btn--${variant}`}
       type="button"
-      aria-label="Restart game"
+      aria-label={ariaLabel}
       onClick={onClick}
     >
-      Restart
+      {label}
     </button>
   );
 }
