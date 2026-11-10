@@ -1,0 +1,43 @@
+/* ==========================================================================
+   RestartButton — Reset action
+   ========================================================================== */
+
+.restart-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 360px;
+  height: 48px;
+
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: var(--weight-medium);
+  line-height: 1.5;
+  letter-spacing: -0.14px;
+  text-transform: uppercase;
+
+  color: var(--color-white-sheet);
+  background-color: var(--color-void);
+  border: 1px solid var(--color-etch-line);
+  border-radius: var(--radius-button);
+
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.restart-button:hover {
+  background-color: var(--color-white-sheet);
+  color: var(--color-void);
+}
+
+.restart-button:focus-visible {
+  outline: 2px solid var(--color-signal-yellow);
+  outline-offset: 2px;
+}
+
+.restart-button:active {
+  background-color: var(--color-studio-gray);
+  color: var(--color-void);
+}

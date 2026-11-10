@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Board — 3×3 grid of cells
+   ========================================================================== */
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1px;
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid var(--color-etch-line);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-instrument-panel);
+  background-color: var(--color-etch-line);
+}

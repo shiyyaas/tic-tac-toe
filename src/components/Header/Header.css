@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Header — Minimal fixed wordmark bar (per design.md: 80px fixed header)
+   ========================================================================== */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 0 var(--space-5);
+  height: 80px;
+
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: var(--weight-bold);
+  line-height: 1.5;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+
+  color: var(--color-etch-line);
+  background-color: transparent;
+  user-select: none;
+}

@@ -1,0 +1,46 @@
+/* ==========================================================================
+   StatusBar — Turn indicator / game result
+   ========================================================================== */
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+
+  width: 100%;
+  max-width: 360px;
+  padding: var(--space-3) var(--space-4);
+
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: var(--weight-medium);
+  line-height: 1.5;
+  letter-spacing: 0px;
+  color: var(--color-release-gray);
+
+  background-color: transparent;
+  border: 1px solid var(--color-etch-line);
+  border-radius: var(--radius-card);
+  text-align: center;
+}
+
+.status-bar__player {
+  font-weight: var(--weight-bold);
+}
+
+.status-bar__player--x {
+  color: var(--color-white-sheet);
+}
+
+.status-bar__player--o {
+  color: var(--color-signal-yellow);
+}
+
+.status-bar--winner {
+  color: var(--color-white-sheet);
+}
+
+.status-bar--draw {
+  color: var(--color-listing-gray);
+}
